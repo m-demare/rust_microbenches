@@ -11,11 +11,16 @@ criterion = { version = "0.4", features = ["html_reports", "real_blackbox"] }
 [dependencies]
 rand = "0.8.5"
 rustc-hash = "1.1.0"
+utf8-chars = "3.0.1"
 
 [profile.bench]
 debug = true
 
 [[bench]]
 name = "small_map_bench"
+harness = false
+
+[[bench]]
+name = "read_file_bench"
 harness = false
 
